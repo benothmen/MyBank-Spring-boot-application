@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Mon Banque</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link ref="stylesheet" type="text/css"
+          href="../static/css/mystyle.css"
+          th:href="@{/css/mystyle.css}" />
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a th:href="@{/operations}">Index</a></li>
+                    <li><a th:href="@{/comptes}">Comptes</a></li>
+                    <li><a th:href="@{/clients}">Clients</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a th:href="@{/login?logout}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section layout:fragment="content" ></section>
+    <footer>
+        <div class="navbar-fixed-bottom">
+            <small>Zied benOthman</small>
+        </div>
+    </footer>
+</body>
+</html>
+
+
